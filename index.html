@@ -200,6 +200,17 @@ html, body {
     overflow-x: hidden;
   }
     }
+
+    /* === FIX 3D VISIBILITY === */
+.carousel img {
+  opacity: 0.4;
+  transition: transform 1s ease, opacity 0.8s ease;
+}
+
+.carousel img.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotateY(0deg) translateZ(520px) scale(1.05);
+}    
     
   </style>
 </head>
@@ -255,5 +266,37 @@ html, body {
       angle += 72;
       carousel.style.transform = `rotateY(${angle}deg)`;
     }
+  </script>
+  <script>
+  const images = document.querySelectorAll(".carousel img");
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    images.forEach((img, index) => {
+      const offset = index - currentIndex;
+      const rotate = offset * 72;
+
+      img.classList.remove("active");
+      img.style.transform =
+        `translate(-50%, -50%) rotateY(${rotate}deg) translateZ(500px)`;
+
+      if (index === currentIndex) {
+        img.classList.add("active");
+      }
+    });
+  }
+
+  function rotateRight() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCarousel();
+  }
+
+  function rotateLeft() {
+    currentIndex =
+      (currentIndex - 1 + images.length) % images.length;
+    updateCarousel();
+  }
+
+  updateCarousel();
   </script></body>
 </html>
