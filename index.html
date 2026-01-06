@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNTUK YANG KUCINTA 🫀❤️‍🩹</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }.container {
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.profile {
+  margin: 30px auto;
+}
+
+.profile img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%; /* 100% perfect circle */
+  object-fit: cover;
+  border: 4px solid #ff6ec7;
+  box-shadow: 0 0 25px rgba(255, 110, 199, 0.7);
+}
+
+.description {
+  max-width: 800px;
+  margin: 30px auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #f1f1f1;
+}
+
+/* 3D Carousel */
+.carousel-wrapper {
+  perspective: 1200px;
+  margin: 60px auto;
+  width: 100%;
+  height: 320px;
+  position: relative;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.carousel img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  width: 420px; /* slightly wide ratio */
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Position images in 3D space */
+.carousel img:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(500px); }
+.carousel img:nth-child(2) { transform: translate(-50%, -50%) rotateY(72deg) translateZ(500px); }
+.carousel img:nth-child(3) { transform: translate(-50%, -50%) rotateY(144deg) translateZ(500px); }
+.carousel img:nth-child(4) { transform: translate(-50%, -50%) rotateY(216deg) translateZ(500px); }
+.carousel img:nth-child(5) { transform: translate(-50%, -50%) rotateY(288deg) translateZ(500px); }
+
+.controls {
+  margin-top: 20px;
+}
+
+.controls button {
+  background: #ff6ec7;
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  margin: 0 10px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.controls button:hover {
+  background: #ff3fa4;
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 0.85rem;
+  color: #cccccc;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>UNTUK YANG KUCINTA 🫀❤️‍🩹</h1><!-- Profile Circle Image -->
+<div class="profile">
+  <!-- Replace image URL with your own photo -->
+  <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Profile Photo" />
+</div>
+
+<!-- Description -->
+<div class="description">
+  She is not just someone I love, she is a universe of kindness, warmth, and quiet strength. 
+  Her smile has the power to calm storms, and her presence makes ordinary moments feel magical. 
+  She is patient, sincere, and beautifully imperfect in the most perfect way. 
+  Every laugh, every glance, and every dream she carries makes this world feel more meaningful. 
+  Loving her is effortless, because she is truly extraordinary.
+</div>
+
+<!-- 3D Image Carousel -->
+<div class="carousel-wrapper">
+  <div class="carousel" id="carousel">
+    <!-- Replace these images with your own (copyright-respected images) -->
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Memory 1" />
+    <img src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913" alt="Memory 2" />
+    <img src="https://images.unsplash.com/photo-1500534314209-a26db0f5e2b6" alt="Memory 3" />
+    <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4" alt="Memory 4" />
+    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7" alt="Memory 5" />
+  </div>
+</div>
+
+<!-- Controls -->
+<div class="controls">
+  <button onclick="rotateLeft()">◀ Left</button>
+  <button onclick="rotateRight()">Right ▶</button>
+</div>
+
+<footer>
+  © 2026 Love Project. Images used from royalty-free sources (Unsplash). All rights respected.
+</footer>
+
+  </div>  <script>
+    let angle = 0;
+    const carousel = document.getElementById('carousel');
+
+    function rotateRight() {
+      angle -= 72;
+      carousel.style.transform = `rotateY(${angle}deg)`;
+    }
+
+    function rotateLeft() {
+      angle += 72;
+      carousel.style.transform = `rotateY(${angle}deg)`;
+    }
+  </script></body>
+</html>
