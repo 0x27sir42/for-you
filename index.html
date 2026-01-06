@@ -166,6 +166,41 @@ body::before {
   background: linear-gradient(135deg, #ff6ec7, #ff3fa4);
   box-shadow: 0 10px 25px rgba(255,110,199,0.4);
 }
+    
+/* === FIX HORIZONTAL SCROLL ISSUE === */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Prevent 3D elements from expanding screen width */
+.carousel-wrapper,
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Lock container width to viewport */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  overflow-x: hidden;
+}
+
+/* Ensure images never push layout */
+.carousel img {
+  max-width: 100%;
+}
+
+/* Mobile safe area */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+    }
+    
   </style>
 </head>
 <body>
