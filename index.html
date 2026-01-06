@@ -110,6 +110,62 @@ footer {
   color: #cccccc;
 }
 
+    /* === ADDITIONAL BEAUTIFUL BACKGROUND === */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,110,199,0.25), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(120,115,245,0.25), transparent 45%);
+  z-index: -1;
+}
+
+/* === FULL SCREEN SUPPORT === */
+.container {
+  min-height: 100vh;
+  padding: 40px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* === RESPONSIVE FOR MOBILE === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 0 10px;
+  }
+
+  .carousel-wrapper {
+    height: 260px;
+  }
+
+  .carousel img {
+    width: 300px;
+    height: 190px;
+  }
+
+  .profile img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* === EXTRA SMOOTH LOOK === */
+.carousel img {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.controls button {
+  background: linear-gradient(135deg, #ff6ec7, #ff3fa4);
+  box-shadow: 0 10px 25px rgba(255,110,199,0.4);
+}
   </style>
 </head>
 <body>
