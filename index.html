@@ -211,6 +211,33 @@ html, body {
   opacity: 1;
   transform: translate(-50%, -50%) rotateY(0deg) translateZ(520px) scale(1.05);
 }    
+
+/* === IMAGE BACKGROUND (ADDITIONAL ONLY) === */
+body {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("IMG_20260106_175753.png");
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Soft blur + glow overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.25), transparent 45%),
+    radial-gradient(circle at bottom, rgba(255,182,193,0.25), transparent 55%);
+  pointer-events: none;
+  z-index: -1;
+}
     
   </style>
 </head>
